@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Tweet from "./components/Tweet";
 
@@ -40,7 +41,10 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <h1>Tweet App </h1>
+      {tweetsArray.map((tweet, index) => (
+        <Tweet key={index} tweet={tweet} />
+      ))}
     </div>
   );
 }
